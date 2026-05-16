@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy – SuperCal</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 720px; margin: 60px auto; padding: 0 24px; color: #1a1a1a; }
+    h1 { font-size: 2rem; margin-bottom: 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 4px; }
+    p, li { line-height: 1.7; color: #444; }
+    a { color: #1a73e8; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #d0d0d0; padding: 8px 12px; text-align: left; }
+    th { background: #f5f5f5; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    hr { border: none; border-top: 1px solid #e0e0e0; margin: 2rem 0; }
+    strong { color: #1a1a1a; }
+    nav { margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <nav><a href="/">&larr; SuperCal</a></nav>
+  <h1>Privacy Policy for SuperCal</h1>
+  <p class="meta"><strong>Effective date:</strong> 2026-04-27 &nbsp;|&nbsp; <strong>Last updated:</strong> 2026-05-06</p>
+
+  <h2>What SuperCal Does</h2>
+  <p>SuperCal is a Chrome extension that adds task-management features to Google Calendar: day focus mode, content indicators, bulk event moving, and layout improvements. It enhances the Google Calendar interface directly in your browser without requiring an account or any external service.</p>
+
+  <hr>
+
+  <h2>Data Accessed</h2>
+  <p>SuperCal requests access to your Google Calendar data via the Google Calendar API using the OAuth2 scope <code>https://www.googleapis.com/auth/calendar.events</code>. The specific types of Google user data accessed are:</p>
+  <ul>
+    <li><strong>Event metadata:</strong> event IDs, titles, start/end dates and times, time zones</li>
+    <li><strong>Event content:</strong> event descriptions and location fields (used only to detect whether content is present, not stored or transmitted)</li>
+    <li><strong>Calendar event list:</strong> the list of events visible in the current calendar view</li>
+  </ul>
+  <p>This data is accessed only on-demand, only while you are actively using the extension, and only to power the features described below.</p>
+
+  <hr>
+
+  <h2>Data Usage</h2>
+  <p>SuperCal uses Google user data exclusively to provide its in-browser features:</p>
+  <table>
+    <thead>
+      <tr><th>Feature</th><th>Data Used</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Content Indicators</td>
+        <td>Event description and location fields</td>
+        <td>Detect whether an event has a description or location so the extension can display a visual indicator</td>
+      </tr>
+      <tr>
+        <td>Bulk Move</td>
+        <td>Event IDs, start/end times, time zones</td>
+        <td>Move selected events to a different date via the Calendar API</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>SuperCal does not use Google user data for any other purpose</strong>, including advertising, profiling, analytics, machine learning, or any purpose beyond the direct in-browser functionality described above.</p>
+  <p>All data processing happens locally within your browser. API calls are made directly from the extension's service worker to the Google Calendar API — no intermediate server is involved.</p>
+
+  <hr>
+
+  <h2>Data Sharing</h2>
+  <p>SuperCal does <strong>not</strong> share Google user data with any third party. Specifically:</p>
+  <ul>
+    <li>No calendar data is sent to any server owned or operated by SuperCal or its developer.</li>
+    <li>No analytics services, advertising networks, or data brokers receive any data.</li>
+    <li>No data is shared with other Chrome extensions or applications.</li>
+  </ul>
+  <p>The only external communication the extension makes is direct API calls to <code>https://www.googleapis.com/calendar/v3/</code> on your behalf, using your OAuth token.</p>
+
+  <hr>
+
+  <h2>Data Storage and Protection</h2>
+  <p>SuperCal stores <strong>only</strong> your feature toggle preferences (on/off settings for each feature) in <code>chrome.storage.sync</code>. This data:</p>
+  <ul>
+    <li>Contains no personal information and no Google user data</li>
+    <li>Is synced across your Chrome sessions via your Google account's built-in Chrome sync</li>
+    <li>Is never transmitted to any server other than Chrome's built-in sync infrastructure</li>
+  </ul>
+  <p><strong>OAuth tokens</strong> are obtained via Chrome's built-in Identity API (<code>chrome.identity</code>) and are managed entirely by the browser. SuperCal never writes OAuth tokens to <code>chrome.storage</code>, <code>localStorage</code>, cookies, or any other persistent storage. Tokens are used in-memory only for the duration of a single API request.</p>
+  <p><strong>No Google Calendar data is ever written to disk or persistent storage</strong> by this extension.</p>
+
+  <hr>
+
+  <h2>Data Retention and Deletion</h2>
+  <p>Because SuperCal does not collect or store any Google user data, there is no calendar data to retain or delete.</p>
+  <p>The only data stored by SuperCal is your feature toggle preferences in <code>chrome.storage.sync</code>. This data contains no personal information. You can delete it at any time by:</p>
+  <ol>
+    <li>Uninstalling SuperCal from Chrome — this automatically clears all extension storage</li>
+    <li>Or clearing extension data manually via Chrome's developer tools</li>
+  </ol>
+  <p>To request deletion of any data or for any privacy-related questions, contact: <a href="mailto:idan.file@gmail.com">idan.file@gmail.com</a></p>
+
+  <hr>
+
+  <h2>Contact</h2>
+  <p>For questions about this privacy policy, contact: <a href="mailto:idan.file@gmail.com">idan.file@gmail.com</a></p>
+</body>
+</html>
